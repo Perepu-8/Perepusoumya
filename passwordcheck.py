@@ -1,48 +1,34 @@
-import re
-
-def check_password_strength(password):
-    strength = 0
-    remarks = ""
-
-    # Conditions
-    length_regex = r'.{8,}'                # Minimum 8 characters
-    lowercase_regex = r'[a-z]'             # At least one lowercase
-    uppercase_regex = r'[A-Z]'             # At least one uppercase
-    digit_regex = r'[0-9]'                 # At least one digit
-    special_char_regex = r'[@$!%*?&]'      # At least one special character
-
-    # Checking conditions
-    if re.search(length_regex, password):
-        strength += 1
-    if re.search(lowercase_regex, password):
-        strength += 1
-    if re.search(uppercase_regex, password):
-        strength += 1
-    if re.search(digit_regex, password):
-        strength += 1
-    if re.search(special_char_regex, password):
-        strength += 1
-
-    # Remarks
-    if strength == 5:
-        remarks = "Excellent Password 🔥"
-    elif strength == 4:
-        remarks = "Strong Password 👍"
-    elif strength == 3:
-        remarks = "Medium Password 🙂 – IMPROVE"
-    elif strength == 2:
-        remarks = "Weak Password 😕"
+from string import punctuation as spl
+def passwordchecker(password):
+    temp=0
+    if(len(password)>=8):
+        temp+=1
     else:
-        remarks = "Very Weak Password 🚫" 
+        print("PASSWORD TOO SHORT. SHOULD CONTAIN ATLEAST 8 CHARACTERS.")
+    if(any(chr.isdigit() for chr in password)):
+        temp+=1
+    else:
+        print("PASSWORD SHOULD CONTAIN ATLEAST ONE DIGIT.")
+    if(any(chr.islower() for chr in password)):
+        temp+=1
+    else:
+        print("PASSWORD SHOULD CONTAIN ATLEAST ONE LOWERCASE LETTER.")
+    if(any(chr.isupper() for chr in password)):
+        temp+=1
+    else:
+        print("PASSWORD SHOULD CONTAIN ATLEAST ONE UPPERCASE LETTER.")
+    if(any( ((chr in spl)for chr in password))):
+        temp+=1
+    else:
+        print("PASSWORD SHOULD CONTAIN ATLEAST ONE SPECIAL CHARACTER.")
+    if temp>=5:
+        return "STRONG 🔥"
+    elif temp>=3:
+        return"MEDIUM 🙂(CAN IMPROVE)"
+    else:
+        return"WEAK 🚫"
 
-    return strength, remarks
+Password=input("ENTER A PASSWORD: ")
+data=passwordchecker(Password)
+print("PASSWORD:",data)       
 
-
-# MAIN PROGRAM
-print("# PASSWORD STRENGTH CHECKER")
-pwd = input("Enter your password: ")
-
-score, message = check_password_strength(pwd)
-
-print("\nStrength Score:", score, "/ 5")
-print("Result:", message)
