@@ -1,0 +1,73 @@
+Commit 1: 
+1.Initialize project structure
+2.Created project folder for Password Strength Checker
+3.Added initial password_checker.py file
+4.Added .gitignore and basic README template
+
+Commit 2: 
+1.Implement basic password input handling
+2.Added function to accept password from user
+3.Implemented simple console-based UI
+4.Added validation for empty input.
+
+Commit 3: 
+1.Add core strength evaluation logic
+2.Implemented password scoring system
+3.Added checks for length, uppercase, lowercase, digits, and special characters
+4.Returned strength categories: Weak, Moderate, Strong
+
+Commit 4: 
+1.Add regex-based validation
+2.Integrated regular expressions for accurate pattern matching
+3.Improved detection of character types
+4.Added special character whitelist
+
+Commit 5: 
+1.Enhance scoring algorithm
+2.Adjusted scoring weights for better accuracy
+3.Introduced penalties for repetitive characters
+4.Added bonus for longer passwords
+
+Commit 6: 
+1.Add user feedback messages
+2.Added suggestions for improving weak passwords
+3.Display detailed feedback based on missing criteria
+4.Refined output formatting for readability
+
+Commit 7: 
+1.Improve code modularity
+2.Split logic into separate functions
+3.Created helper functions: check_length(), check_strength(), give_suggestions()
+4.Improved code reusability and clarity
+
+Commit 8: 
+1.Add unit tests
+2.Added test cases for strength evaluation logic
+3.Added edge-case test suite
+4.Integrated basic pytest setup
+
+Commit 9: 
+1.Update README with usage instructions
+2.Added explanation of password rules
+3.Included example inputs/outputs
+4.Added installation + running guide
+
+Commit 10: 
+1.Removed unused variables
+2.Improved comments + docstrings
+3.Release v1.0
+4.Stable version of Password Strength Checker
+5.All core features implemented
+
+Commit 11:
+1.Documentation Commits
+2.README update
+3.How to run
+4.Usage examples
+5.Flowchart update
+
+Ready 
+
+
+
+
