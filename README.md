@@ -21,6 +21,14 @@ STEPS TO INSTALL AND RUN THE PROJECT:
 1. Clone the repository: git clone <your-repo-link>
 2. Navigate to project folder: cd password-strength-checker
 3. Run the Python file: python passwordchecker.py
+
+Project Structures:
+/password-strength-checker
+│── password_checker.py
+│── suggestions.py
+│── README.md
+│── tests/
+│ └── test_password_checker.py
    
 INSTRUCTIONS FOR TESTING:
 1.Run the program
